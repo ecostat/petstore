@@ -6,17 +6,17 @@ info:
     this sample, you can use the api key `special-key` to test the authorization     filters.'
   termsOfService: http://swagger.io/terms/
   contact:
-    email: xy@test.io
+    email: xy@mymail.ch
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  version: 1.0.2
+  version: 1.0.0
 externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
 servers:
-- url: https://localhost:8080/v2
-- url: http://localhost:8080/v2
+- url: https://localhost:8080
+- url: http://localhost:8080
 tags:
 - name: pet
   description: Everything about your Pets
@@ -210,8 +210,6 @@ paths:
         "404":
           description: Pet not found
           content: {}
-      security:
-      - api_key: []
       x-swagger-router-controller: Pet
     post:
       tags:
@@ -816,7 +814,7 @@ components:
       type: oauth2
       flows:
         implicit:
-          authorizationUrl: http://petstore.swagger.io/oauth/dialog
+          authorizationUrl: http://localhost:8080/oauth/dialog
           scopes:
             write:pets: modify pets in your account
             read:pets: read your pets
