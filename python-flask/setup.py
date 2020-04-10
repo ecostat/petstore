@@ -18,7 +18,7 @@ setup(
     name=NAME,
     version=VERSION,
     description="myswagger petstore",
-    author_email="xy@test.io",
+    author_email="xy@mymail.ch",
     url="",
     keywords=["Swagger", "myswagger petstore"],
     install_requires=REQUIRES,
